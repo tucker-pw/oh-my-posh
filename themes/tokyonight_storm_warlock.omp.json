@@ -39,7 +39,7 @@
           "properties": {
             "style": "folder"
           },
-          "template": "<b>{{ .Path }}</b> <p:invader-green>󰯉</>"
+          "template": "<b>{{ .Path }}</b> <p:invader-green>󰯉 </>"
         },
         {
           "type": "git",
