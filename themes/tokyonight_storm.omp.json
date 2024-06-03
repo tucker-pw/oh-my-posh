@@ -18,6 +18,7 @@
     "blue-black": "#565f89",
     "terminal-black": "#414868",
     "terminal-violet": "#7F00FF",
+    "invader-green": "#34ef8e",
     "t-background": "p:main-bg"
   },
   "blocks": [
@@ -28,8 +29,8 @@
           "type": "text",
           "style": "plain",
           "background": "transparent",
-          "foreground": "p:terminal-blue",
-          "template": "\u279c "
+          "foreground": "p:invader-green",
+          "template": "󰯉 "
         },
         {
           "type": "path",
@@ -70,6 +71,12 @@
       "overflow": "hide",
       "segments": [
         {
+          "type": "terraform",
+          "style": "plain",
+          "foreground": "p:terminal-violet",
+          "template": "\ue69a {{.WorkspaceName}}"
+        },
+        {
           "type": "kubectl",
           "style": "plain",
           "foreground": "p:terminal-magenta",
@@ -80,12 +87,6 @@
           "style": "plain",
           "foreground": "p:terminal-blue",
           "template": " \ue7b0 {{ .Context }} "
-        },
-        {
-          "type": "terraform",
-          "style": "plain",
-          "foreground": "terminal-violet",
-          "template": "\ue69a {{.WorkspaceName}}"
         },
         {
           "type": "node",
