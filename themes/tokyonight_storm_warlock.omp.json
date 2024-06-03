@@ -139,6 +139,7 @@
     },
     {
       "alignment": "right",
+      "overflow": "break",
       "segments": [
         {
           "type": "kubectl",
