@@ -71,8 +71,8 @@
         {
           "type": "kubectl",
           "style": "plain",
-          "foreground": "p:terminal-blue",
-          "template": " \uf308 Kubernetes {{.Context}} cluster {{if .Namespace}}- {{.Namespace}} namespace{{end}} "
+          "foreground": "p:terminal-magenta",
+          "template": " \uf2388 Kubernetes {{.Context}} cluster {{if .Namespace}}- {{.Namespace}} namespace{{end}} "
         },
         {
           "type": "node",
