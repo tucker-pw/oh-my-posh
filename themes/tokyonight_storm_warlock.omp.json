@@ -137,7 +137,7 @@
         {
           "foreground": "p:pistachio-green",
           "style": "plain",
-          "template": "\uf197 ",
+          "template": "\uf197",
           "type": "text"
         }
       ],
