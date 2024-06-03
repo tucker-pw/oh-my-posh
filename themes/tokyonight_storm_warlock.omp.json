@@ -139,7 +139,6 @@
     },
     {
       "alignment": "right",
-      "newline": true,
       "segments": [
         {
           "type": "kubectl",
