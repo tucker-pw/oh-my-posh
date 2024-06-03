@@ -69,6 +69,12 @@
       "overflow": "hide",
       "segments": [
         {
+          "type": "kubectl",
+          "style": "plain",
+          "foreground": "p:terminal-blue",
+          "template": " \uf308 Kubernetes {{.Context}} cluster {{if .Namespace}}- {{.Namespace}} namespace{{end}} "
+        },
+        {
           "type": "node",
           "style": "plain",
           "foreground": "p:pistachio-green",
