@@ -72,7 +72,7 @@
           "type": "kubectl",
           "style": "plain",
           "foreground": "p:terminal-magenta",
-          "template": "\uf0833 {{ .Context }}{{ if .Namespace }}::{{ .Namespace }}{{ end }}"
+          "template": "\udb82 {{ .Context }}{{ if .Namespace }}::{{ .Namespace }}{{ end }}"
         },
         {
           "type": "docker",
