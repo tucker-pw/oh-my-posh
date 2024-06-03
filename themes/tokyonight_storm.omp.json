@@ -17,6 +17,7 @@
     "terminal-magenta": "#bb9af7",
     "blue-black": "#565f89",
     "terminal-black": "#414868",
+    "terminal-violet": "#7F00FF",
     "t-background": "p:main-bg"
   },
   "blocks": [
@@ -79,6 +80,12 @@
           "style": "plain",
           "foreground": "p:terminal-blue",
           "template": " \ue7b0 {{ .Context }} "
+        },
+        {
+          "type": "terraform",
+          "style": "plain",
+          "foreground": "terminal-violet",
+          "template": "\ue69a {{.WorkspaceName}}"
         },
         {
           "type": "node",
