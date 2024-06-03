@@ -77,6 +77,18 @@
           "template": "\ue69a {{.WorkspaceName}} "
         },
         {
+          "type": "kubectl",
+          "style": "plain",
+          "foreground": "p:terminal-magenta",
+          "template": " 󰠳 {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}} "
+        },
+        {
+          "type": "docker",
+          "style": "plain",
+          "foreground": "p:terminal-blue",
+          "template": " \ue7b0 {{ .Context }} "
+        },
+        {
           "type": "node",
           "style": "plain",
           "foreground": "p:pistachio-green",
@@ -137,25 +149,6 @@
       ],
       "type": "prompt"
     },
-    {
-      "alignment": "right",
-      "overflow": "break",
-      "segments": [
-        {
-          "type": "kubectl",
-          "style": "plain",
-          "foreground": "p:terminal-magenta",
-          "template": " 󰠳 {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}} "
-        },
-        {
-          "type": "docker",
-          "style": "plain",
-          "foreground": "p:terminal-blue",
-          "template": " \ue7b0 {{ .Context }} "
-        }
-      ],
-      "type": "prompt"
-    }
   ],
   "secondary_prompt": {
     "background": "transparent",
