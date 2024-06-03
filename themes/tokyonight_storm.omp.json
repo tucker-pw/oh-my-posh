@@ -29,8 +29,8 @@
           "type": "text",
           "style": "plain",
           "background": "transparent",
-          "foreground": "p:invader-green",
-          "template": "󰯉 "
+          "foreground": "p:terminal-blue",
+          "template": "\u279c "
         },
         {
           "type": "path",
@@ -39,7 +39,7 @@
           "properties": {
             "style": "folder"
           },
-          "template": "<b>{{ .Path }}</b> <p:light-sky-blue>\u26a1</>"
+          "template": "<b>{{ .Path }}</b> <p:invader-green>󰯉</>"
         },
         {
           "type": "git",
@@ -74,7 +74,7 @@
           "type": "terraform",
           "style": "plain",
           "foreground": "p:terminal-violet",
-          "template": "\ue69a {{.WorkspaceName}}"
+          "template": "\ue69a {{.WorkspaceName}} "
         },
         {
           "type": "kubectl",
