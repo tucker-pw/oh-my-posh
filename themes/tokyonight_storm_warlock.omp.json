@@ -152,7 +152,7 @@
           "style": "plain",
           "foreground": "p:terminal-blue",
           "template": " \ue7b0 {{ .Context }} "
-        },
+        }
       ],
       "type": "prompt"
     }
