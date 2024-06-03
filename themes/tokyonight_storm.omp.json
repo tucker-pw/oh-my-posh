@@ -72,7 +72,7 @@
           "type": "kubectl",
           "style": "plain",
           "foreground": "p:terminal-magenta",
-          "template": "\uF10FE {{ .Context }}{{ if .Namespace }}::{{ .Namespace }}{{ end }} "
+          "template": "\uFD31 {{ .Context }}{{ if .Namespace }}::{{ .Namespace }}{{ end }}"
         },
         {
           "type": "docker",
