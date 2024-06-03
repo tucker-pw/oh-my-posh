@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "$schema": "https://raw.githubusercontent.com/tucker-pw/oh-my-posh/main/themes/1_shell.omp.json",
   "blocks": [
     {
       "alignment": "left",
