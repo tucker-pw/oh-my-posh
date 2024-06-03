@@ -77,18 +77,6 @@
           "template": "\ue69a {{.WorkspaceName}} "
         },
         {
-          "type": "kubectl",
-          "style": "plain",
-          "foreground": "p:terminal-magenta",
-          "template": " 󰠳 {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}} "
-        },
-        {
-          "type": "docker",
-          "style": "plain",
-          "foreground": "p:terminal-blue",
-          "template": " \ue7b0 {{ .Context }} "
-        },
-        {
           "type": "node",
           "style": "plain",
           "foreground": "p:pistachio-green",
@@ -146,6 +134,25 @@
           "template": "\u25b6",
           "type": "text"
         }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "right",
+      "newline": true,
+      "segments": [
+        {
+          "type": "kubectl",
+          "style": "plain",
+          "foreground": "p:terminal-magenta",
+          "template": " 󰠳 {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}} "
+        },
+        {
+          "type": "docker",
+          "style": "plain",
+          "foreground": "p:terminal-blue",
+          "template": " \ue7b0 {{ .Context }} "
+        },
       ],
       "type": "prompt"
     }
