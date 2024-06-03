@@ -72,7 +72,7 @@
           "type": "kubectl",
           "style": "plain",
           "foreground": "p:terminal-magenta",
-          "template": " \uf2388 Kubernetes {{.Context}} cluster {{if .Namespace}}- {{.Namespace}} namespace{{end}} "
+          "template": " \uf10fe Kubernetes {{.Context}} cluster {{if .Namespace}}- {{.Namespace}} namespace{{end}} "
         },
         {
           "type": "node",
