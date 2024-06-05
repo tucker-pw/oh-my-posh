@@ -19,7 +19,7 @@
     "terminal-black": "#414868",
     "terminal-violet": "#7F00FF",
     "invader-green": "#34ef8e",
-    "docker-blue": "#1d9bf5",
+    "more-blue": "#1d9bf5",
     "t-background": "p:main-bg"
   },
   "blocks": [
@@ -86,7 +86,7 @@
         {
           "type": "docker",
           "style": "plain",
-          "foreground": "p:terminal-blue",
+          "foreground": "p:more-blue",
           "template": "\ue7b0 {{ .Context }} "
         },
         {
