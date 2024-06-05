@@ -19,6 +19,7 @@
     "terminal-black": "#414868",
     "terminal-violet": "#7F00FF",
     "invader-green": "#34ef8e",
+    "docker-blue": "#1d9bf5"
     "t-background": "p:main-bg"
   },
   "blocks": [
@@ -85,7 +86,7 @@
         {
           "type": "docker",
           "style": "plain",
-          "foreground": "p:terminal-blue",
+          "foreground": "p:docker-blue",
           "template": "\ue7b0 {{ .Context }} "
         },
         {
@@ -97,7 +98,7 @@
         {
           "type": "text",
           "style": "plain",
-          "foreground": "p:blue-black",
+          "foreground": "p:terminal-blue",
           "template": "{{ if .Env.PGDATABASE }}\ue76e {{ .Env.PGDATABASE }}{{ end }}"
         },
         {
