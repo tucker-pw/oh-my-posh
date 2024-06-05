@@ -98,7 +98,7 @@
           "type": "text",
           "style": "plain",
           "foreground": "p:blue-black",
-          "template": "\ue76e {{ env.PGDATABASE }} "
+          "template": "\ue76e {{ .Env.PGDATABASE }} "
         },
         {
           "type": "php",
