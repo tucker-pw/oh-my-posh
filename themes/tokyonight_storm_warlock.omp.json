@@ -19,7 +19,7 @@
     "terminal-black": "#414868",
     "terminal-violet": "#7F00FF",
     "invader-green": "#34ef8e",
-    "docker-blue": "#1d9bf5"
+    "docker-blue": "#1d9bf5",
     "t-background": "p:main-bg"
   },
   "blocks": [
