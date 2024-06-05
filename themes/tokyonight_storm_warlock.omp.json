@@ -95,6 +95,12 @@
           "template": "\ue718 {{ .Full }} "
         },
         {
+          "type": "text", #postgreSQL
+          "style": "plain",
+          "foreground": "p:blue-black",
+          "template": "\ue76e {{ .Env. PGDATABASE }} "
+        },
+        {
           "type": "php",
           "style": "plain",
           "foreground": "p:terminal-blue",
