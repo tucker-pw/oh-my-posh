@@ -86,7 +86,7 @@
         {
           "type": "docker",
           "style": "plain",
-          "foreground": "p:docker-blue",
+          "foreground": "p:terminal-blue",
           "template": "\ue7b0 {{ .Context }} "
         },
         {
