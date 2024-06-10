@@ -20,6 +20,7 @@
     "terminal-violet": "#7F00FF",
     "invader-green": "#34ef8e",
     "more-blue": "#1d9bf5",
+    "pumpkin-orange": "#efa234",
     "t-background": "p:main-bg"
   },
   "blocks": [
@@ -142,9 +143,9 @@
       "newline": true,
       "segments": [
         {
-          "foreground": "p:pistachio-green",
+          "foreground": "p:pumpkin-orange",
           "style": "plain",
-          "template": "\uf197",
+          "template": "\uf0ba3",
           "type": "text"
         }
       ],
