@@ -97,16 +97,26 @@
           "template": "\ue718 {{ .Full }} "
         },
         {
+          "type": "command",
+          "style": "plain",
+          "foreground": "p:pistachio-green",
+          "properties": {
+            "shell": "bash",
+            "command": "node --version"
+          },
+          "template": "\ue718 {{ .Output }}"
+        },
+        {
           "type": "text",
           "style": "plain",
           "foreground": "p:terminal-blue",
           "template": "{{ if .Env.PGDATABASE }}\ue76e {{ .Env.PGDATABASE }}{{ end }}"
         },
         {
-          "type": "php",
+          "type": "python",
           "style": "plain",
-          "foreground": "p:terminal-blue",
-          "template": "\ue73d {{ .Full }} "
+          "foreground": "p:terminal-yellow",
+          "template": "\uE235 {{ .Full }}"
         },
         {
           "type": "command",
@@ -114,7 +124,7 @@
           "foreground": "p:terminal-yellow",
           "properties": {
             "shell": "bash",
-            "command": "cat \"$HOME/.pyenv/version\""
+            "command": "python --version"
           },
           "template": "\uE235 {{ .Output }}"
         },
