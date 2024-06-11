@@ -104,7 +104,7 @@
             "shell": "bash",
             "command": "node --version"
           },
-          "template": "\ue718 {{ .Output }}"
+          "template": "\ue718 {{ .Output }} "
         },
         {
           "type": "text",
@@ -126,7 +126,7 @@
             "shell": "bash",
             "command": "python --version"
           },
-          "template": "\uE235 {{ .Output }}"
+          "template": "\uE235 {{ .Output }} "
         },
         {
           "type": "ruby",
