@@ -109,7 +109,7 @@
           "template": "\ue73d {{ .Full }} "
         },
         {
-          "type": "python",
+          "type": "command",
           "style": "plain",
           "foreground": "p:terminal-yellow",
           "properties": {
