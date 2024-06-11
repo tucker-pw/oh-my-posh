@@ -112,7 +112,11 @@
           "type": "python",
           "style": "plain",
           "foreground": "p:terminal-yellow",
-          "template": "\uE235 {{ .Full }} "
+          "properties": {
+            "shell": "bash",
+            "command": "cat \"$HOME/.pyenv/version\""
+          },
+          "template": "\uE235 {{ .Output }}"
         },
         {
           "type": "ruby",
