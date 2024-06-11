@@ -113,7 +113,7 @@
           "style": "plain",
           "foreground": "p:terminal-yellow",
           "properties": {
-            "shell": "bash",
+            "shell": "zsh",
             "command": "cat \"$HOME/.pyenv/version\""
           },
           "template": "\uE235 {{ .Output }}"
