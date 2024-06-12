@@ -77,7 +77,7 @@
           "type": "aws",
           "style": "plain",
           "foreground": "p:aws-pink",
-          "template": "\uf0ef {{ .Profile }}{{ if .Region }}@{{ .Region }}{{ end }} "
+          "template": "\uf0ef  {{ .Profile }}{{ if .Region }}@{{ .Region }}{{ end }} "
         },
         {
           "type": "terraform",
