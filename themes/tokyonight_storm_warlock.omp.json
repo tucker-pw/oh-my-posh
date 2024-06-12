@@ -74,10 +74,10 @@
       "overflow": "hide",
       "segments": [
         {
-          "type": "aws"
-          "foreground": "p:aws-pink",
+          "type": "aws",
           "style": "plain",
-          "template": "[{{ .Profile }}{{if .Region}}@{{ .Region }}{{ end }}]",
+          "foreground": "p:aws-pink",
+          "template": "\uf0ef [{{ .Profile }}{{if .Region}}@{{ .Region }}{{ end }}]"
         },
         {
           "type": "terraform",
