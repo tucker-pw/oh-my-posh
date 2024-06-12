@@ -95,7 +95,7 @@
           "type": "docker",
           "style": "plain",
           "foreground": "p:more-blue",
-          "template": "\ue7b0 {{ .Context }} "
+          "template": "{{ if ne .Context \"desktop-linux\" }}\ue7b0 {{ .Context }}{{ end }}"
         },
         {
           "type": "node",
