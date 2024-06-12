@@ -131,7 +131,7 @@
           "foreground": "p:terminal-yellow",
           "properties": {
             "shell": "bash",
-            "command": "python --version"
+            "command": "python --version | sed 's/Python //;s/^/v/'"
           },
           "template": "\uE235 {{ .Output }}"
         },
