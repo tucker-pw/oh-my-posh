@@ -86,6 +86,16 @@
           "template": "\ue69a {{.WorkspaceName}} "
         },
         {
+          "type": "command",
+          "style": "plain",
+          "foreground": "p:terminal-violet",
+          "properties": {
+            "shell": "bash",
+            "command": "get_terraform_version.sh"
+          },
+          "template": "\ue69a {{ .Output }}"
+        },
+        {
           "type": "kubectl",
           "style": "plain",
           "foreground": "p:terminal-magenta",
