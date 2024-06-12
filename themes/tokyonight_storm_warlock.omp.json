@@ -21,6 +21,7 @@
     "invader-green": "#34ef8e",
     "more-blue": "#1d9bf5",
     "pumpkin-orange": "#efa234",
+    "aws-pink": "#ff3a7f",
     "t-background": "p:main-bg"
   },
   "blocks": [
@@ -72,6 +73,12 @@
       "alignment": "right",
       "overflow": "hide",
       "segments": [
+        {
+          "type": "aws"
+          "foreground": "p:aws-pink",
+          "style": "plain",
+          "template": "[{{ .Profile }}{{if .Region}}@{{ .Region }}{{ end }}]",
+        },
         {
           "type": "terraform",
           "style": "plain",
@@ -126,7 +133,7 @@
             "shell": "bash",
             "command": "python --version"
           },
-          "template": "\uE235 {{ .Output }} "
+          "template": "\uE235 {{ .Output }}"
         },
         {
           "type": "ruby",
