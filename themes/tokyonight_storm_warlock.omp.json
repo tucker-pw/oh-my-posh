@@ -80,16 +80,6 @@
           "template": "\uf0ef  {{ .Profile }}{{ if .Region }}@{{ .Region }}{{ end }} "
         },
         {
-          "type": "command",
-          "style": "plain",
-          "foreground": "p:terminal-violet",
-          "properties": {
-            "shell": "bash",
-            "command": "asdf current terraform | awk '{print \"v\"$2}'"
-          },
-          "template": "\ue69a {{ .Output }}"
-        },
-        {
           "type": "kubectl",
           "style": "plain",
           "foreground": "p:terminal-magenta",
@@ -100,6 +90,16 @@
           "style": "plain",
           "foreground": "p:more-blue",
           "template": "{{ if ne .Context \"desktop-linux\" }}\ue7b0 {{ .Context }}{{ end }}"
+        },
+        {
+          "type": "command",
+          "style": "plain",
+          "foreground": "p:terminal-violet",
+          "properties": {
+            "shell": "bash",
+            "command": "asdf current terraform | awk '{print \"v\"$2}' "
+          },
+          "template": "\ue69a {{ .Output }}"
         },
         {
           "type": "node",
