@@ -97,7 +97,7 @@
           "foreground": "p:terminal-violet",
           "properties": {
             "shell": "bash",
-            "command": "asdf current terraform | awk '{print \"v\"$2} '"
+            "command": "asdf current terraform | awk '{print \"v\"$2 }'"
           },
           "template": "\ue69a {{ .Output }}"
         },
