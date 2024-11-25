@@ -108,16 +108,6 @@
           "template": "\ue718 {{ .Full }} "
         },
         {
-          "type": "command",
-          "style": "plain",
-          "foreground": "p:pistachio-green",
-          "properties": {
-            "shell": "bash",
-            "command": "node --version"
-          },
-          "template": "\ue718 {{ .Output }} "
-        },
-        {
           "type": "text",
           "style": "plain",
           "foreground": "p:terminal-blue",
