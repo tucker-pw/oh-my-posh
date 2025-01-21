@@ -117,7 +117,7 @@
           "type": "python",
           "style": "plain",
           "foreground": "p:terminal-yellow",
-          "template": "\uE235 {{ .Full }}"
+          "template": "\uE235 {{ .Full }} "
         },
         {
           "type": "command",
@@ -127,7 +127,7 @@
             "shell": "bash",
             "command": "python --version | sed 's/Python //;s/^/v/'"
           },
-          "template": "\uE235 {{ .Output }}"
+          "template": "\uE235 {{ .Output }} "
         },
         {
           "type": "command",
@@ -137,7 +137,7 @@
             "shell": "bash",
             "command": "asdf current ruby | awk '{print \"v\"$2}'"
           },
-          "template": "\uE791 {{ .Output }} "
+          "template": "\uE791 {{ .Output }}"
         },
         {
           "type": "go",
