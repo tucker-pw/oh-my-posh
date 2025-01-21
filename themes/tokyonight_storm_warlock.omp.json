@@ -33,7 +33,7 @@
           "style": "plain",
           "background": "transparent",
           "foreground": "p:terminal-blue",
-          "template": "\ue29e "
+          "template": "\ue711 "
         },
         {
           "type": "path",
