@@ -130,7 +130,7 @@
           "template": "\uE235 {{ .Output }}"
         },
         {
-          "type": "ruby",
+          "type": "command",
           "style": "plain",
           "foreground": "p:terminal-red",
           "properties": {
