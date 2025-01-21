@@ -133,7 +133,11 @@
           "type": "ruby",
           "style": "plain",
           "foreground": "p:terminal-red",
-          "template": "\uE791 {{ .Full}} "
+          "properties": {
+            "shell": "bash",
+            "command": "asdf current ruby | awk '{print \"v\"$2}'"
+          },
+          "template": "\uE791 {{ .Output }} "
         },
         {
           "type": "go",
