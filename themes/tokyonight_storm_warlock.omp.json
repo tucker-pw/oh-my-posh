@@ -82,7 +82,7 @@
         {
           "type": "kubectl",
           "style": "plain",
-          "foreground": "p:terminal-magenta",
+          "foreground": "p:terminal-blue",
           "template": "󰠳 {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}} "
         },
         {
