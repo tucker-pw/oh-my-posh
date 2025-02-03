@@ -118,7 +118,7 @@
           "type": "python",
           "style": "plain",
           "foreground": "p:terminal-yellow",
-          "template": "\ue235 {{ .Full }} "
+          "template": "\ue606 {{ .Full }} "
         },
         {
           "type": "command",
@@ -128,7 +128,7 @@
             "shell": "bash",
             "command": "python --version | sed 's/Python //;s/^/v/'"
           },
-          "template": "\uE606 {{ .Output }} "
+          "template": "\ue606 {{ .Output }} "
         },
         {
           "type": "command",
