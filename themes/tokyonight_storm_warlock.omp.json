@@ -118,7 +118,7 @@
           "type": "python",
           "style": "plain",
           "foreground": "p:terminal-yellow",
-          "template": "\uE235 {{ .Full }} "
+          "template": "\ue235 {{ .Full }} "
         },
         {
           "type": "command",
