@@ -22,6 +22,7 @@
     "more-blue": "#1d9bf5",
     "pumpkin-orange": "#efa234",
     "aws-pink": "#ff3a7f",
+    "ruby-red": "#E0115F"
     "t-background": "p:main-bg"
   },
   "blocks": [
@@ -127,12 +128,12 @@
             "shell": "bash",
             "command": "python --version | sed 's/Python //;s/^/v/'"
           },
-          "template": "\uE235 {{ .Output }} "
+          "template": "\uE606 {{ .Output }} "
         },
         {
           "type": "command",
           "style": "plain",
-          "foreground": "p:terminal-red",
+          "foreground": "p:ruby-red",
           "properties": {
             "shell": "bash",
             "command": "asdf current ruby | awk '{print \"v\"$2}'"
