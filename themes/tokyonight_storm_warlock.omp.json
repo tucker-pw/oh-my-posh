@@ -165,7 +165,7 @@
         {
           "foreground": "p:pumpkin-orange",
           "style": "plain",
-          "template": "󰮣",
+          "template": "\uea67",
           "type": "text"
         }
       ],
