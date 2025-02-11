@@ -39,11 +39,11 @@
         {
           "type": "path",
           "style": "plain",
-          "foreground": "p:terminal-magenta",
+          "foreground": "p:invader-green",
           "properties": {
             "style": "folder"
           },
-          "template": "<b>{{ .Path }}</b> <p:invader-green>\ueb27 </>"
+          "template": "<b>\uea83 {{ .Path }}</b> <p:terminal-magenta>\uea84 </>"
         },
         {
           "type": "git",
