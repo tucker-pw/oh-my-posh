@@ -98,7 +98,7 @@
           "foreground": "p:terminal-violet",
           "properties": {
             "shell": "bash",
-            "command": "if [ -f \"$HOME/.tool-versions\" ]; then grep '^terraform' \"$HOME/.tool-versions\" | awk '{print \"v\"$2}' || echo ''; else echo ''; fi"
+            "command": "if [ -f \"$PWD/.tool-versions\" ]; then grep '^terraform' \"$PWD/.tool-versions\" | awk '{print \"v\"$2}' || echo ''; else echo ''; fi"
           },
           "template": "{{ if ne .Output \"\" }}\ue69a {{ .Output }} {{ end }}"
         },
