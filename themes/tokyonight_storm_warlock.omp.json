@@ -17,6 +17,7 @@
     "invader-green": "#34ef8e",
     "light-sky-blue": "#7dcfff",
     "node-mantis": "#6cc24a",
+    "postgres-blue": "#336791",
     "pumpkin-orange": "#ff9513",
     "python-mustard": "#ffde57",
     "ruby-red": "#e0115f",
@@ -118,7 +119,7 @@
           "type": "kubectl",
           "style": "plain",
           "foreground": "p:terminal-blue",
-          "template": "\ue81d {{ .Context}}{{if .Namespace}} :: {{.Namespace}}{{end}} "
+          "template": "\u2388 {{ .Context}}{{if .Namespace}} :: {{.Namespace}}{{end}} "
         },
         {
           "type": "docker",
@@ -135,7 +136,7 @@
         {
           "type": "text",
           "style": "plain",
-          "foreground": "p:light-sky-blue",
+          "foreground": "p:postgres-blue",
           "template": "{{ if .Env.PGDATABASE }}\ue76e {{ .Env.PGDATABASE }}{{ end }}"
         },
         {
