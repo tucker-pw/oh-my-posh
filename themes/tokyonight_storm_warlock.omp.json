@@ -85,9 +85,9 @@
           "foreground": "p:terraform-violet",
           "properties": {
             "shell": "bash",
-            "command": "asdf current terraform | awk '{print \"v\"$2}'"
+            "command": "if [ -f \".tool-versions\" ] && grep -q '^terraform' \".tool-versions\"; then\n  grep '^terraform' \".tool-versions\" | awk '{print $2}'\nelse\n  command -v asdf >/dev/null 2>&1 && asdf current terraform 2>/dev/null | awk '{print $2}' || echo ''\nfi"
           },
-          "template": "\ue69a {{ .Output }} "
+          "template": "\ue8bd {{ .Output }} "
         },
         {
           "type": "node",
@@ -101,7 +101,7 @@
           "foreground": "p:python-mustard",
           "properties": {
             "shell": "bash",
-            "command": "python --version | sed 's/Python //;s/^/v/'"
+            "command": "if [ -f \".tool-versions\" ] && grep -q '^python' \".tool-versions\"; then\n  grep '^python' \".tool-versions\" | awk '{print $2}'\nelse\n  python --version 2>&1 | sed 's/Python //'\nfi"
           },
           "template": "\ue606 {{ .Output }} "
         },
@@ -111,7 +111,7 @@
           "foreground": "p:ruby-red",
           "properties": {
             "shell": "bash",
-            "command": "asdf current ruby | awk '{print \"v\"$2}'"
+            "command": "if [ -f \".tool-versions\" ] && grep -q '^ruby' \".tool-versions\"; then\n  grep '^ruby' \".tool-versions\" | awk '{print $2}'\nelse\n  command -v asdf >/dev/null 2>&1 && asdf current ruby 2>/dev/null | awk '{print $2}' || echo ''\nfi"
           },
           "template": "\uE791 {{ .Output }}"
         },
