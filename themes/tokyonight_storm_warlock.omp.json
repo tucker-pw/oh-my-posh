@@ -98,7 +98,7 @@
           "foreground": "p:terminal-violet",
           "properties": {
             "shell": "bash",
-            "command": "terraform version 2>/dev/null | head -n1 | sed -E 's/.*v([0-9]+\\.[0-9]+\\.[0-9]+).*/v\\1/' || echo ''"
+            "command": "terraform version 2>/dev/null | head -n1 | sed -E 's/.*v([0-9]+\\.[0-9]+\\.[0-9]+).*/v\\1/'"
           },
           "template": "{{ if .Output }}\ue69a {{ .Output }} {{ end }}"
         },
@@ -136,7 +136,7 @@
           "foreground": "p:ruby-red",
           "properties": {
             "shell": "bash",
-            "command": "ruby --version 2>/dev/null | awk '{print \"v\"$2}' || echo ''"
+            "command": "ruby --version 2>/dev/null | awk '{print \"v\"$2}'"
           },
           "template": "{{ if .Output }}\uE791 {{ .Output }} {{ end }}"
         },
