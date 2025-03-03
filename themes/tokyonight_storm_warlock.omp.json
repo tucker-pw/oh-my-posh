@@ -100,7 +100,7 @@
             "shell": "bash",
             "command": "if command -v asdf >/dev/null 2>&1; then asdf current terraform 2>/dev/null | awk '{print \"v\"$2}' || echo ''; else echo ''; fi"
           },
-          "template": "{{ if .Output }}\ue69a {{ .Output }} {{ end }}"
+          "template": "{{ if ne .Output \"\" }}\ue69a {{ .Output }} {{ end }}"
         },
         {
           "type": "node",
@@ -138,7 +138,7 @@
             "shell": "bash",
             "command": "if command -v asdf >/dev/null 2>&1; then asdf current ruby 2>/dev/null | awk '{print \"v\"$2}' || echo ''; else echo ''; fi"
           },
-          "template": "{{ if .Output }}\uE791 {{ .Output }} {{ end }}"
+          "template": "{{ if ne .Output \"\" }}\uE791 {{ .Output }} {{ end }}"
         },
         {
           "type": "go",
