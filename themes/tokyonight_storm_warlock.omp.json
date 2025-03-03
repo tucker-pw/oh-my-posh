@@ -100,13 +100,13 @@
             "shell": "bash",
             "command": "if [ -f \"$HOME/.tool-versions\" ]; then grep '^terraform' \"$HOME/.tool-versions\" | awk '{print \"v\"$2}' || echo ''; else echo ''; fi"
           },
-          "template": "{{ if ne .Output \"\" }} {{ .Output }} {{ end }}"
+          "template": "{{ if ne .Output \"\" }}\ue69a {{ .Output }} {{ end }}"
         },
         {
           "type": "terraform",
           "style": "plain",
           "foreground": "p:terminal-violet",
-          "template": " {{ .WorkspaceName }}{{ if .Version }} {{ .Version }}{{ end }}"
+          "template": "\ue69a {{ .WorkspaceName }}{{ if .Version }} {{ .Version }}{{ end }}"
         },
         {
           "type": "node",
