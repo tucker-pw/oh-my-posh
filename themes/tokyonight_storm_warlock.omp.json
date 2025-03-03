@@ -98,7 +98,7 @@
           "foreground": "p:terminal-violet",
           "properties": {
             "shell": "bash",
-            "command": "# Check local .tool-versions first\nif [ -f \"$PWD/.tool-versions\" ] && grep -q '^terraform' \"$PWD/.tool-versions\"; then\n  grep '^terraform' \"$PWD/.tool-versions\" | awk '{print \"v\"$2}'\n# Then check home directory .tool-versions\nelif [ -f \"$HOME/.tool-versions\" ] && grep -q '^terraform' \"$HOME/.tool-versions\"; then\n  grep '^terraform' \"$HOME/.tool-versions\" | awk '{print \"v\"$2}'\n# Finally fall back to asdf current if available\nelif command -v asdf >/dev/null 2>&1; then\n  asdf current terraform 2>/dev/null | awk '{print \"v\"$2}' || echo ''\nelse\n  echo ''\nfi"
+            "command": "if [ -f \"$PWD/.tool-versions\" ] && grep -q '^terraform' \"$PWD/.tool-versions\"; then\n  grep '^terraform' \"$PWD/.tool-versions\" | awk '{print \"v\"$2}'\nelse\n  command -v asdf >/dev/null 2>&1 && asdf current terraform 2>/dev/null | awk '{print \"v\"$2}' || echo ''\nfi"
           },
           "template": "{{ if ne .Output \"\" }}\ue69a {{ .Output }} {{ end }}"
         },
@@ -113,6 +113,16 @@
           "style": "plain",
           "foreground": "p:terminal-blue",
           "template": "{{ if .Env.PGDATABASE }}\ue76e {{ .Env.PGDATABASE }}{{ end }}"
+        },
+        {
+          "type": "command",
+          "style": "plain",
+          "foreground": "p:terminal-yellow",
+          "properties": {
+            "shell": "bash",
+            "command": "# Try pyenv first\nif command -v pyenv >/dev/null 2>&1; then\n  PYENV_VERSION=$(pyenv version-name 2>/dev/null)\n  if [ $? -eq 0 ] && [ \"$PYENV_VERSION\" != \"system\" ]; then\n    echo \"v$PYENV_VERSION\"\n    exit 0\n  fi\nfi\n\n# Fall back to system python\npython --version 2>&1 | sed 's/Python //;s/^/v/'"
+          },
+          "template": "{{ if ne .Output \"\" }}\ue606 {{ .Output }} {{ end }}"
         },
         {
           "type": "python",
