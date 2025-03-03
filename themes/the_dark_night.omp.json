@@ -87,7 +87,7 @@
             "shell": "bash",
             "command": "asdf current terraform | awk '{print \"v\"$2}'"
           },
-          "template": "\ue8bd {{ .Output }} "
+          "template": "\ue69a {{ .Output }} "
         },
         {
           "type": "node",
@@ -113,7 +113,7 @@
             "shell": "bash",
             "command": "asdf current ruby | awk '{print \"v\"$2}'"
           },
-          "template": "\uE791 {{ .Output }}"
+          "template": "\uE791 {{ .Output }} "
         },
         {
           "type": "kubectl",
