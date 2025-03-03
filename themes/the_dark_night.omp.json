@@ -85,7 +85,7 @@
           "foreground": "p:terraform-violet",
           "properties": {
             "shell": "bash",
-            "command": "asdf current terraform | awk '{print \"v\"$2}'"
+            "command": "asdf current terraform | awk 'NR==2 {print \"v\"$2}'"
           },
           "template": "\ue69a {{ .Output }} "
         },
@@ -111,7 +111,7 @@
           "foreground": "p:ruby-red",
           "properties": {
             "shell": "bash",
-            "command": "asdf current ruby | awk '{print \"v\"$2}'"
+            "command": "asdf current ruby | awk 'NR==2 {print \"v\"$2}'"
           },
           "template": "\uE791 {{ .Output }} "
         },
