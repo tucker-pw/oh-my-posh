@@ -78,35 +78,31 @@
           "type": "aws",
           "style": "plain",
           "foreground": "p:aws-pink",
-          "template": "\uf0ef  {{ .Profile }}{{ if .Region }}@{{ .Region }}{{ end }} "
+          "template": " {{ .Profile}}{{if .Region}}@{{.Region}}{{end}}"
         },
         {
           "type": "kubectl",
           "style": "plain",
           "foreground": "p:terminal-blue",
-          "template": "󰠳 {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}} "
+          "template": "󰠳{{ .Context}}{{if .Namespace}} :: {{.Namespace}}{{end}} "
         },
         {
           "type": "docker",
           "style": "plain",
           "foreground": "p:more-blue",
-          "template": "{{ if ne .Context \"desktop-linux\" }}\ue7b0 {{ .Context }}{{ end }}"
+          "template": " {{ .Context }} "
         },
         {
-          "type": "command",
+          "type": "terraform",
           "style": "plain",
           "foreground": "p:terminal-violet",
-          "properties": {
-            "shell": "bash",
-            "command": "if command -v asdf >/dev/null 2>&1; then asdf current terraform 2>/dev/null | awk '{print \"v\"$2}' || echo ''; else echo ''; fi"
-          },
-          "template": "{{ if ne .Output \"\" }}\ue69a {{ .Output }} {{ end }}"
+          "template": "{{ .WorkspaceName }}{{ if .Version }} {{ .Version }}{{ end }}"
         },
         {
           "type": "node",
           "style": "plain",
           "foreground": "p:pistachio-green",
-          "template": "\ue718 {{ .Full }} "
+          "template": " {{ .Full }} "
         },
         {
           "type": "text",
@@ -118,33 +114,19 @@
           "type": "python",
           "style": "plain",
           "foreground": "p:terminal-yellow",
-          "template": "\ue606 {{ .Full }} "
+          "template": " {{ .Full }} "
         },
         {
-          "type": "command",
-          "style": "plain",
-          "foreground": "p:terminal-yellow",
-          "properties": {
-            "shell": "bash",
-            "command": "python --version | sed 's/Python //;s/^/v/'"
-          },
-          "template": "\ue606 {{ .Output }} "
-        },
-        {
-          "type": "command",
+          "type": "ruby",
           "style": "plain",
           "foreground": "p:ruby-red",
-          "properties": {
-            "shell": "bash",
-            "command": "if command -v asdf >/dev/null 2>&1; then asdf current ruby 2>/dev/null | awk '{print \"v\"$2}' || echo ''; else echo ''; fi"
-          },
-          "template": "{{ if ne .Output \"\" }}\uE791 {{ .Output }} {{ end }}"
+          "template": "  {{ .Full }}"
         },
         {
           "type": "go",
           "style": "plain",
           "foreground": "p:light-sky-blue",
-          "template": "\uFCD1 {{ .Full}} "
+          "template": " {{ .Full }} "
         },
         {
           "foreground": "p:white-blue",
