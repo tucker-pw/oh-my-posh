@@ -98,9 +98,9 @@
           "foreground": "p:terminal-violet",
           "properties": {
             "shell": "bash",
-            "command": "if [ -f \"$PWD/.tool-versions\" ] && grep -q '^terraform' \"$PWD/.tool-versions\"; then\n  grep '^terraform' \"$PWD/.tool-versions\" | awk '{print \"v\"$2}'\nelse\n  command -v asdf >/dev/null 2>&1 && asdf current terraform 2>/dev/null | awk '{print \"v\"$2}' || echo ''\nfi"
+            "command": "if [ -f \"$PWD/.tool-versions\" ] && grep -q '^terraform' \"$PWD/.tool-versions\"; then\n  grep '^terraform' \"$PWD/.tool-versions\" | awk '{print $2}'\nelse\n  command -v asdf >/dev/null 2>&1 && asdf current terraform 2>/dev/null | awk '{print $2}' || echo ''\nfi"
           },
-          "template": "\ue69a {{ .Output }} "
+          "template": "\ue8bd {{ .Output }} "
         },
         {
           "type": "node",
