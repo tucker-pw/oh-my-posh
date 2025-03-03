@@ -93,6 +93,16 @@
           "template": "{{ if ne .Context \"desktop-linux\" }} {{ .Context }}{{ end }}"
         },
         {
+          "type": "command",
+          "style": "plain",
+          "foreground": "p:terminal-violet",
+          "properties": {
+            "shell": "bash",
+            "command": "if [ -f \"$HOME/.tool-versions\" ]; then grep '^terraform' \"$HOME/.tool-versions\" | awk '{print \"v\"$2}' || echo ''; else echo ''; fi"
+          },
+          "template": "{{ if ne .Output \"\" }} {{ .Output }} {{ end }}"
+        },
+        {
           "type": "terraform",
           "style": "plain",
           "foreground": "p:terminal-violet",
