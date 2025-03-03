@@ -90,7 +90,7 @@
           "type": "docker",
           "style": "plain",
           "foreground": "p:more-blue",
-          "template": "  {{ .Context }} "
+          "template": "{{ if ne .Context \"desktop-linux\" }} {{ .Context }}{{ end }}"
         },
         {
           "type": "terraform",
@@ -102,7 +102,7 @@
           "type": "node",
           "style": "plain",
           "foreground": "p:pistachio-green",
-          "template": "  {{ .Full }} "
+          "template": " {{ .Full }} "
         },
         {
           "type": "text",
