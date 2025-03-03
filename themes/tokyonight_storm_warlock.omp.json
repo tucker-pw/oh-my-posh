@@ -84,25 +84,25 @@
           "type": "kubectl",
           "style": "plain",
           "foreground": "p:terminal-blue",
-          "template": "󰠳{{ .Context}}{{if .Namespace}} :: {{.Namespace}}{{end}} "
+          "template": "󰠳 {{ .Context}}{{if .Namespace}} :: {{.Namespace}}{{end}} "
         },
         {
           "type": "docker",
           "style": "plain",
           "foreground": "p:more-blue",
-          "template": " {{ .Context }} "
+          "template": "  {{ .Context }} "
         },
         {
           "type": "terraform",
           "style": "plain",
           "foreground": "p:terminal-violet",
-          "template": "{{ .WorkspaceName }}{{ if .Version }} {{ .Version }}{{ end }}"
+          "template": " {{ .WorkspaceName }}{{ if .Version }} {{ .Version }}{{ end }}"
         },
         {
           "type": "node",
           "style": "plain",
           "foreground": "p:pistachio-green",
-          "template": " {{ .Full }} "
+          "template": "  {{ .Full }} "
         },
         {
           "type": "text",
@@ -114,7 +114,7 @@
           "type": "python",
           "style": "plain",
           "foreground": "p:terminal-yellow",
-          "template": " {{ .Full }} "
+          "template": "  {{ .Full }} "
         },
         {
           "type": "ruby",
@@ -126,7 +126,7 @@
           "type": "go",
           "style": "plain",
           "foreground": "p:light-sky-blue",
-          "template": " {{ .Full }} "
+          "template": "  {{ .Full }} "
         },
         {
           "foreground": "p:white-blue",
