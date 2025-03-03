@@ -3,27 +3,25 @@
   "console_title_template": " {{ .Folder }} :: {{if .Root}}Admin{{end}}",
   "palette": {
     "main-bg": "#24283b",
-    "terminal-red": "#f7768e",
-    "pistachio-green": "#9ece6a",
-    "terminal-green": "#73daca",
-    "terminal-yellow": "#e0af68",
     "terminal-blue": "#7aa2f7",
-    "celeste-blue": "#b4f9f8",
-    "light-sky-blue": "#7dcfff",
-    "terminal-white": "#c0caf5",
-    "white-blue": "#a9b1d6",
-    "blue-bell": "#9aa5ce",
-    "pastal-grey": "#cfc9c2",
+    "terminal-green": "#73daca",
     "terminal-magenta": "#bb9af7",
-    "blue-black": "#565f89",
-    "terminal-black": "#414868",
-    "terminal-violet": "#7F00FF",
-    "invader-green": "#34ef8e",
-    "more-blue": "#1d9bf5",
-    "pumpkin-orange": "#ff9513",
+    "terminal-red": "#f7768e",
+    "terminal-white": "#c0caf5",
+    "terminal-yellow": "#e0af68",
+    "t-background": "p:main-bg",
     "aws-pink": "#ff3a7f",
+    "blue-bell": "#9aa5ce",
+    "celeste-blue": "#b4f9f8",
+    "docker-blue": "#1d9bf5",
+    "invader-green": "#34ef8e",
+    "light-sky-blue": "#7dcfff",
+    "node-mantis": "#6cc24a",
+    "pumpkin-orange": "#ff9513",
+    "python-mustard": "#ffde57",
     "ruby-red": "#e0115f",
-    "t-background": "p:main-bg"
+    "terraform-violet": "#7F00FF",
+    "white-blue": "#a9b1d6"
   },
   "blocks": [
     {
@@ -81,21 +79,9 @@
           "template": " \ue7ad {{ .Profile}}{{if .Region}}@{{.Region}}{{end}} "
         },
         {
-          "type": "kubectl",
-          "style": "plain",
-          "foreground": "p:terminal-blue",
-          "template": "󰠳 {{ .Context}}{{if .Namespace}} :: {{.Namespace}}{{end}} "
-        },
-        {
-          "type": "docker",
-          "style": "plain",
-          "foreground": "p:more-blue",
-          "template": "{{ if ne .Context \"desktop-linux\" }} {{ .Context }}{{ end }}"
-        },
-        {
           "type": "command",
           "style": "plain",
-          "foreground": "p:terminal-violet",
+          "foreground": "p:terraform-violet",
           "properties": {
             "shell": "bash",
             "command": "asdf current terraform | awk '{print \"v\"$2}'"
@@ -105,25 +91,13 @@
         {
           "type": "node",
           "style": "plain",
-          "foreground": "p:pistachio-green",
+          "foreground": "p:node-mantis",
           "template": "\ue718 {{ .Full }} "
-        },
-        {
-          "type": "text",
-          "style": "plain",
-          "foreground": "p:terminal-blue",
-          "template": "{{ if .Env.PGDATABASE }}\ue76e {{ .Env.PGDATABASE }}{{ end }}"
-        },
-        {
-          "type": "python",
-          "style": "plain",
-          "foreground": "p:terminal-yellow",
-          "template": "\ue606 {{ .Full }} "
         },
         {
           "type": "command",
           "style": "plain",
-          "foreground": "p:terminal-yellow",
+          "foreground": "p:python-mustard",
           "properties": {
             "shell": "bash",
             "command": "python --version | sed 's/Python //;s/^/v/'"
@@ -141,10 +115,28 @@
           "template": "\uE791 {{ .Output }}"
         },
         {
+          "type": "kubectl",
+          "style": "plain",
+          "foreground": "p:terminal-blue",
+          "template": "\ue81d {{ .Context}}{{if .Namespace}} :: {{.Namespace}}{{end}} "
+        },
+        {
+          "type": "docker",
+          "style": "plain",
+          "foreground": "p:docker-blue",
+          "template": "{{ if ne .Context \"desktop-linux\" }}\ue7b0 {{ .Context }}{{ end }}"
+        },
+        {
           "type": "go",
           "style": "plain",
           "foreground": "p:light-sky-blue",
-          "template": "{{ if .Full }}\uFCD1 {{ .Full }} {{ end }}"
+          "template": "{{ if .Full }}\ue627 {{ .Full }} {{ end }}"
+        },
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "p:light-sky-blue",
+          "template": "{{ if .Env.PGDATABASE }}\ue76e {{ .Env.PGDATABASE }}{{ end }}"
         },
         {
           "foreground": "p:white-blue",
