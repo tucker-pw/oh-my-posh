@@ -120,7 +120,7 @@
           "foreground": "p:terminal-yellow",
           "properties": {
             "shell": "bash",
-            "command": "# Try pyenv first\nif command -v pyenv >/dev/null 2>&1; then\n  PYENV_VERSION=$(pyenv version-name 2>/dev/null)\n  if [ $? -eq 0 ] && [ \"$PYENV_VERSION\" != \"system\" ]; then\n    echo \"v$PYENV_VERSION\"\n    exit 0\n  fi\nfi\n\n# Fall back to system python\npython --version 2>&1 | sed 's/Python //;s/^/v/'"
+            "command": "# Try reading from .python-version in current directory\nif [ -f \"$PWD/.python-version\" ]; then\n  PYTHON_VERSION=$(cat \"$PWD/.python-version\" 2>/dev/null)\n  if [ $? -eq 0 ] && [ -n \"$PYTHON_VERSION\" ]; then\n    echo \"v$PYTHON_VERSION\"\n    exit 0\n  fi\nfi\n\n# Fall back to system python\npython --version 2>&1 | sed 's/Python //;s/^/v/'"
           },
           "template": "{{ if ne .Output \"\" }}\ue606 {{ .Output }} {{ end }}"
         },
