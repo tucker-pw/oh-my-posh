@@ -20,7 +20,7 @@
     "terminal-violet": "#7F00FF",
     "invader-green": "#34ef8e",
     "more-blue": "#1d9bf5",
-    "pumpkin-orange": "#efa234",
+    "pumpkin-orange": "#ff9513",
     "aws-pink": "#ff3a7f",
     "ruby-red": "#e0115f",
     "t-background": "p:main-bg"
@@ -152,7 +152,7 @@
             "always_enabled": true
           },
           "style": "plain",
-          "template": " \ueba2 {{ .FormattedMs }} ",
+          "template": "\ueba2 {{ .FormattedMs }}",
           "type": "executiontime"
         }
       ],
