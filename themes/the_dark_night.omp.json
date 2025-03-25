@@ -109,7 +109,7 @@
           "type": "go",
           "style": "plain",
           "foreground": "p:light-sky-blue",
-          "template": "{{ if .Full }}\ue627 {{ .Full }} {{ end }}"
+          "template": "{{ if .Full }}\ue627 v{{ .Full }} {{ end }}"
         },
         {
           "type": "command",
