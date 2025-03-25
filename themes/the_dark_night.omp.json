@@ -106,6 +106,12 @@
           "template": "\ue606 {{ .Output }} "
         },
         {
+          "type": "go",
+          "style": "plain",
+          "foreground": "p:light-sky-blue",
+          "template": "{{ if .Full }}\ue627 {{ .Full }} {{ end }}"
+        },
+        {
           "type": "command",
           "style": "plain",
           "foreground": "p:ruby-red",
@@ -116,30 +122,6 @@
           "template": "\uE791 {{ .Output }} "
         },
         {
-          "type": "kubectl",
-          "style": "plain",
-          "foreground": "p:terminal-blue",
-          "template": "\u2388 {{ .Context}}{{if .Namespace}} :: {{.Namespace}}{{end}} "
-        },
-        {
-          "type": "docker",
-          "style": "plain",
-          "foreground": "p:docker-blue",
-          "template": "{{ if ne .Context \"desktop-linux\" }}\ue7b0 {{ .Context }}{{ end }}"
-        },
-        {
-          "type": "go",
-          "style": "plain",
-          "foreground": "p:light-sky-blue",
-          "template": "{{ if .Full }}\ue627 {{ .Full }} {{ end }}"
-        },
-        {
-          "type": "text",
-          "style": "plain",
-          "foreground": "p:postgres-blue",
-          "template": "{{ if .Env.PGDATABASE }}\ue76e {{ .Env.PGDATABASE }}{{ end }}"
-        },
-        {
           "foreground": "p:white-blue",
           "properties": {
             "always_enabled": true
@@ -147,6 +129,12 @@
           "style": "plain",
           "template": "\ueba2 {{ .FormattedMs }}",
           "type": "executiontime"
+        },
+        {
+          "type": "kubectl",
+          "style": "plain",
+          "foreground": "p:terminal-blue",
+          "template": "\u2388 {{ .Context}}{{if .Namespace}} :: {{.Namespace}}{{end}} "
         }
       ],
       "type": "prompt"
