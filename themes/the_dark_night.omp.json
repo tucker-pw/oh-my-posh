@@ -134,7 +134,7 @@
           "type": "kubectl",
           "style": "plain",
           "foreground": "p:terminal-blue",
-          "template": "\u2388 {{ .Context}}{{if .Namespace}} :: {{.Namespace}}{{end}} "
+          "template": " \u2388 {{ .Context}}{{if .Namespace}} :: {{.Namespace}}{{end}} "
         }
       ],
       "type": "prompt"
