@@ -85,7 +85,7 @@
           "foreground": "p:terraform-violet",
           "properties": {
             "shell": "bash",
-            "command": "asdf current terraform | awk 'NR==2 {print \"v\"$2}'"
+            "command": "asdf current terraform | awk 'NR==2 {print $2}'"
           },
           "template": "\ue69a {{ .Output }} "
         },
@@ -101,7 +101,7 @@
           "foreground": "p:python-mustard",
           "properties": {
             "shell": "bash",
-            "command": "python --version | sed 's/Python //;s/^/v/'"
+            "command": "python --version | sed 's/Python //'"
           },
           "template": "\ue606 {{ .Output }} "
         },
@@ -109,7 +109,7 @@
           "type": "go",
           "style": "plain",
           "foreground": "p:light-sky-blue",
-          "template": "{{ if .Full }}\ue627 v{{ .Full }} {{ end }}"
+          "template": "{{ if .Full }}\ue627 {{ .Full }} {{ end }}"
         },
         {
           "type": "command",
@@ -117,9 +117,15 @@
           "foreground": "p:ruby-red",
           "properties": {
             "shell": "bash",
-            "command": "asdf current ruby | awk 'NR==2 {print \"v\"$2}'"
+            "command": "asdf current ruby | awk 'NR==2 {print $2}'"
           },
           "template": "\uE791 {{ .Output }} "
+        },
+        {
+          "type": "kubectl",
+          "style": "plain",
+          "foreground": "p:terminal-blue",
+          "template": " \u2388 {{ .Context}}{{if .Namespace}} :: {{.Namespace}}{{end}} "
         },
         {
           "foreground": "p:white-blue",
@@ -129,12 +135,6 @@
           "style": "plain",
           "template": "\ueba2 {{ .FormattedMs }}",
           "type": "executiontime"
-        },
-        {
-          "type": "kubectl",
-          "style": "plain",
-          "foreground": "p:terminal-blue",
-          "template": " \u2388 {{ .Context}}{{if .Namespace}} :: {{.Namespace}}{{end}} "
         }
       ],
       "type": "prompt"
