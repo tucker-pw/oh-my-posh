@@ -77,7 +77,7 @@
           "type": "aws",
           "style": "plain",
           "foreground": "p:aws-pink",
-          "template": "\uf0ef_{{ .Profile}}{{if .Region}}@{{.Region}}{{end}} "
+          "template": "\uf0ef _{{ .Profile}}{{if .Region}}@{{.Region}}{{end}} "
         },
         {
           "type": "command",
