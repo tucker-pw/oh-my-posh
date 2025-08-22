@@ -112,14 +112,10 @@
           "template": "{{ if .Full }}\ue627 {{ .Full }} {{ end }}"
         },
         {
-          "type": "command",
+          "type": "ruby",
           "style": "plain",
           "foreground": "p:ruby-red",
-          "properties": {
-            "shell": "bash",
-            "command": "asdf current ruby | awk 'NR==2 {print $2}'"
-          },
-          "template": "\uE791 {{ .Output }} "
+          "template": "\uE791 {{ .Full }} "
         },
         {
           "type": "kubectl",
@@ -144,9 +140,9 @@
       "newline": true,
       "segments": [
         {
-          "foreground": "p:pumpkin-orange",
+          "foreground": "p:terminal-yellow",
           "style": "plain",
-          "template": "󰔁",
+          "template": "\ueb6d",
           "type": "text"
         }
       ],
