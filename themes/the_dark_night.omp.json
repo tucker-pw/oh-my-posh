@@ -39,7 +39,7 @@
           "type": "path",
           "style": "plain",
           "foreground": "p:invader-green",
-          "properties": {
+          "options": {
             "style": "folder"
           },
           "template": "<b>\uea83 {{ .Path }}</b> <p:terminal-magenta>\uea84 </>"
@@ -55,7 +55,7 @@
             "{{ if gt .Behind 0 }}p:celeste-blue{{ end }}"
           ],
           "template": "({{ .HEAD}})",
-          "properties": {
+          "options": {
             "fetch_status": true,
             "branch_icon": "\ue725 "
           }
@@ -83,7 +83,7 @@
           "type": "command",
           "style": "plain",
           "foreground": "p:terraform-violet",
-          "properties": {
+          "options": {
             "shell": "bash",
             "command": "asdf current terraform | awk 'NR==2 {print $2}'"
           },
@@ -99,9 +99,9 @@
           "type": "command",
           "style": "plain",
           "foreground": "p:python-mustard",
-          "properties": {
+          "options": {
             "shell": "bash",
-            "command": "python --version | sed 's/Python //'"
+            "command": "uv run --isolated python --version | sed 's/Python //;s/^/v/'"
           },
           "template": "\ue606 {{ .Output }} "
         },
@@ -115,7 +115,11 @@
           "type": "ruby",
           "style": "plain",
           "foreground": "p:ruby-red",
-          "template": "\uE791 {{ .Full }} "
+          "options": {
+            "shell": "bash",
+            "command": "asdf current ruby | awk 'NR==2 {print \"v\"$2}'"
+          },
+          "template": "\uE791 {{ .Output }} "
         },
         {
           "type": "kubectl",
@@ -125,7 +129,7 @@
         },
         {
           "foreground": "p:white-blue",
-          "properties": {
+          "options": {
             "always_enabled": true
           },
           "style": "plain",
