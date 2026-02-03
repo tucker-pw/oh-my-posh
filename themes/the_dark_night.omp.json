@@ -101,7 +101,7 @@
           "foreground": "p:python-mustard",
           "options": {
             "shell": "bash",
-            "command": "if [[ -f .python-version ]] || [[ -f pyproject.toml ]]; then uv run --no-project python --version 2>/dev/null | sed 's/Python //;s/^/v/' || python3 --version 2>&1 | sed 's/Python //;s/^/v/'; else python3 --version 2>&1 | sed 's/Python //;s/^/v/'; fi"
+            "command": "python --version | sed 's/Python //'"
           },
           "template": "\ue606 {{ .Output }} "
         },
